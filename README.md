@@ -1,16 +1,115 @@
-# React + Vite
+# 📝 Todo-List with TanStack Query
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A clean and modern **Todo Management Application** built with **React**, **Vite**, **Tailwind CSS**, **Ant Design**, and **TanStack Query**. The app works with a real REST API and supports full CRUD operations, image uploads, filtering, and detailed views.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Tech Stack
 
-## React Compiler
+* **React** – UI library
+* **Vite** – Fast build tool
+* **Tailwind CSS** – Styling
+* **Ant Design** – Modals, inputs, checkboxes
+* **TanStack Query (React Query)** – Server state management
+* **React Router** – Navigation
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## ✨ Features
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### ✅ Todos
+
+* Fetch todos from API
+* Create a new todo (with image)
+* Edit todo (name, description, status)
+* Delete todo
+* Toggle active / inactive status
+* Upload multiple images
+* Delete images
+* Search todos by name
+* Filter todos by status (all / active / inactive)
+* View detailed todo page
+
+### 📂 Categories
+
+* Fetch categories
+* Add category
+* Edit category
+* Delete category
+* Category details page
+
+---
+
+## 📁 Project Structure
+
+```bash
+src/
+├── pages/
+│   ├── home.jsx
+│   ├── todos.jsx
+│   ├── infoTodos.jsx
+│   ├── category.jsx
+│   └── infoCategory.jsx
+│
+├── services/
+│   ├── todos.js
+│   └── category.js
+│
+├── layout.jsx
+├── App.jsx
+├── main.jsx
+├── index.css
+```
+
+---
+
+## 🔗 API Used
+
+```
+https://to-dos-api.softclub.tj/api/to-dos
+https://to-dos-api.softclub.tj/api/categories
+```
+
+Images:
+
+```
+https://to-dos-api.softclub.tj/images/{imageName}
+```
+
+---
+
+## ⚙️ Installation & Run
+
+```bash
+npm install
+npm run dev
+```
+
+The app will start at:
+
+```
+http://localhost:5173
+```
+
+---
+
+## 🧠 State Management
+
+Server state is fully handled by **TanStack Query**:
+
+* `useQuery` for fetching data
+* `useMutation` for add / edit / delete
+* `invalidateQueries` for auto refetch
+
+This keeps the app fast, clean, and predictable.
+
+---
+
+## 🎨 UI & UX
+
+* Responsive layout
+* Modern cards and grids
+* Clean spacing and typography
+* Smooth hover & transition effects
+* User-friendly modals
+
